@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AugmentWebviewStateStore">
+    <option name="stateMap">
+      <map>
+        <entry key="CHAT_STATE" value="{&quot;currentConversationId&quot;:&quot;84527009-8a46-4345-a614-308224728a31&quot;,&quot;conversations&quot;:{&quot;84527009-8a46-4345-a614-308224728a31&quot;:{&quot;id&quot;:&quot;84527009-8a46-4345-a614-308224728a31&quot;,&quot;createdAtIso&quot;:&quot;2025-08-08T07:49:17.251Z&quot;,&quot;lastInteractedAtIso&quot;:&quot;2025-08-08T07:49:17.251Z&quot;,&quot;chatHistory&quot;:[],&quot;feedbackStates&quot;:{},&quot;toolUseStates&quot;:{},&quot;draftExchange&quot;:{&quot;request_message&quot;:&quot;&quot;,&quot;rich_text_json_repr&quot;:{&quot;type&quot;:&quot;doc&quot;,&quot;content&quot;:[{&quot;type&quot;:&quot;paragraph&quot;}]},&quot;mentioned_items&quot;:[],&quot;status&quot;:&quot;draft&quot;},&quot;requestIds&quot;:[],&quot;isPinned&quot;:false,&quot;isShareable&quot;:false,&quot;extraData&quot;:{&quot;isAgentConversation&quot;:true,&quot;hasAgentOnboarded&quot;:true,&quot;hasDirtyEdits&quot;:false},&quot;personaType&quot;:0,&quot;rootTaskUuid&quot;:&quot;d3f68d6a-3941-49c2-abff-1ea70516c734&quot;}},&quot;agentExecutionMode&quot;:&quot;manual&quot;,&quot;isPanelCollapsed&quot;:true,&quot;displayedAnnouncements&quot;:[]}" />
+      </map>
+    </option>
+  </component>
+</project>
