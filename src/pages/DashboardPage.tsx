@@ -1,10 +1,3 @@
-/**
- * Project Name: CRM Control Panel
- * Project Type: React TypeScript Control Panel Application
- * Intended Hosting Type: Static Hosting (Netlify, Vercel, AWS S3)
- * Author: J. Schneider - j.g@live.com
- */
-
 import React from 'react';
 import {
   Box,
@@ -71,52 +64,57 @@ export const DashboardPage: React.FC = () => {
           Welcome back, {user?.firstName}!
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Here's what's happening with your business today.
+          Here&apos;s what&apos;s happening with your business today.
         </Typography>
       </Box>
 
       {/* Metrics Grid */}
       <Grid container spacing={3} sx={{ mb: 4 }}>
-        {mockMetrics.map((metric) => (
-          <Grid item xs={12} sm={6} md={3} key={metric.id}>
-            <Card>
-              <CardContent>
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                  <Avatar
-                    sx={{
-                      backgroundColor: 'primary.main',
-                      mr: 2,
-                      width: 48,
-                      height: 48,
-                    }}
-                  >
-                    <metric.icon />
-                  </Avatar>
-                  <Box>
-                    <Typography variant="h4" component="div">
-                      {metric.value}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {metric.title}
-                    </Typography>
+        {mockMetrics.map(metric => {
+          const IconComponent = metric.icon || People;
+          return (
+            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={metric.id}>
+              <Card>
+                <CardContent>
+                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                    <Avatar
+                      sx={{
+                        backgroundColor: 'primary.main',
+                        mr: 2,
+                        width: 48,
+                        height: 48,
+                      }}
+                    >
+                      {React.createElement(IconComponent)}
+                    </Avatar>
+                    <Box>
+                      <Typography variant="h4" component="div">
+                        {metric.value}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {metric.title}
+                      </Typography>
+                    </Box>
                   </Box>
-                </Box>
-                {metric.change !== undefined && (
-                  <Chip
-                    label={`${metric.change > 0 ? '+' : ''}${metric.change}%`}
-                    color={metric.changeType === 'increase' ? 'success' : 'error'}
-                    size="small"
-                  />
-                )}
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
+                  {metric.change !== undefined && (
+                    <Chip
+                      label={`${metric.change > 0 ? '+' : ''}${metric.change}%`}
+                      color={
+                        metric.changeType === 'increase' ? 'success' : 'error'
+                      }
+                      size="small"
+                    />
+                  )}
+                </CardContent>
+              </Card>
+            </Grid>
+          );
+        })}
       </Grid>
 
       {/* Recent Activity */}
       <Grid container spacing={3}>
-        <Grid item xs={12} md={8}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <Paper sx={{ p: 3 }}>
             <Typography variant="h6" gutterBottom>
               Recent Activity
@@ -129,7 +127,7 @@ export const DashboardPage: React.FC = () => {
           </Paper>
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Paper sx={{ p: 3 }}>
             <Typography variant="h6" gutterBottom>
               Quick Actions
